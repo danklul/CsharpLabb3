@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:d="http://xamarin.com/schemas/2014/forms/design" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="Labb3.MainPage" xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             Title="Safe Area"
+             ios:Page.UseSafeArea="true">
+    <StackLayout Padding="20" >
+        <Grid>
+            <Grid.ColumnDefinitions>    
+                <ColumnDefinition></ColumnDefinition>    
+                <ColumnDefinition></ColumnDefinition>       
+            </Grid.ColumnDefinitions>    
+            <Grid.RowDefinitions>    
+                <RowDefinition></RowDefinition>    
+                <RowDefinition></RowDefinition>    
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>   
+            </Grid.RowDefinitions>
+
+            <Label Grid.Row="0" Grid.Column="0" Text="Inmatat Belopp:" HorizontalOptions="Center" />
+            <Label Grid.Row="0" Grid.Column="1" x:Name="EnteredAmountLabel" HorizontalOptions="Center" />
+            <Label Grid.Row="1" Grid.Column="0" Text="Momssats:" HorizontalOptions="Center" />
+            <Label Grid.Row="1" Grid.Column="1" x:Name="vatRateLabel" HorizontalOptions="Center" />
+            <Label Grid.Row="2" Grid.Column="0" Text="Uträknat Belopp:" HorizontalOptions="Center" />
+            <Label Grid.Row="2" Grid.Column="1" x:Name="CalculatedAmountLabel" HorizontalOptions="Center" />
+            <Label Grid.Row="3" Grid.Column="0" Text="Uträknad Moms:" HorizontalOptions="Center" />
+            <Label Grid.Row="3" Grid.Column="1" x:Name="CalculatedVatLabel" HorizontalOptions="Center" />
+
+        </Grid>
+
+        <Entry x:Name="Input" Placeholder="Skriv ett belopp inklusive moms" HorizontalOptions="Center" />
+        <Button Clicked="ClickedFirstButton" Text="8%" HorizontalOptions="Center" />
+        <Button Clicked="ClickedSecondButton" Text="12%" HorizontalOptions="Center" />
+        <Button Clicked="ClickedThirdButton" Text="25%" HorizontalOptions="Center" />
+        
+    </StackLayout>
+</ContentPage>
